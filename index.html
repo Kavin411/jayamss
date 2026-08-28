@@ -1095,7 +1095,7 @@
                 });
             }
 
-            // Direct Email Redirect Script (No limits, free forever)
+            // Direct Email Redirect Script
             const form = document.getElementById("inquiryForm");
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
@@ -1117,7 +1117,7 @@
                     `Message:\n${message}`
                 );
 
-                // Redirect to Gmail / Default Email Client
+                // Redirect to Gmail / Default Email Client directly
                 window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
             });
         });
