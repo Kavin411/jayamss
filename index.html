@@ -41,25 +41,38 @@
             top: 0;
             left: 0;
             z-index: 1000;
-            padding: 15px 8%;
+            padding: 12px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             transition: 0.3s ease-in-out;
         }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
+        /* Image Logo Styling */
+        .logo-img {
+            height: 45px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            background: #ffffff;
+            padding: 4px 10px;
+            border-radius: 8px;
+            transition: 0.3s ease;
         }
 
-        .logo span {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .logo-img:hover {
+            transform: scale(1.03);
+        }
+
+        .footer-logo-img {
+            height: 50px;
+            width: auto;
+            display: inline-block;
+            object-fit: contain;
+            background: #ffffff;
+            padding: 5px 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         nav ul {
@@ -374,7 +387,7 @@
             font-size: 0.95rem;
         }
 
-        /* --- Client Videos Section (NEW) --- */
+        /* --- Client Videos Section --- */
         .client-videos {
             background-color: var(--white);
         }
@@ -775,8 +788,11 @@
 </head>
 <body>
 
+    <!-- Navigation Header with Image Logo -->
     <header>
-        <a href="#" class="logo">Jayam<span>Ads</span></a>
+        <a href="#">
+            <img src="jamdigisolution.png" alt="JAM Digi Solutions" class="logo-img">
+        </a>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -888,7 +904,7 @@
         </div>
     </section>
 
-    <!-- Client Videos Section (NEW) -->
+    <!-- Client Videos Section -->
     <section class="client-videos" id="client-videos">
         <h2 class="section-title">Client Videos</h2>
         <p class="section-subtitle">Take a look at our recent video work created for our valued clients.</p>
@@ -1023,10 +1039,13 @@
         </div>
     </section>
 
+    <!-- Footer with Image Logo -->
     <footer>
         <div class="footer-content">
             <div class="footer-box">
-                <a href="#" class="logo" style="margin-bottom: 20px; display: inline-block;">Jayam<span>Ads</span></a>
+                <a href="#">
+                    <img src="jamdigisolution.png" alt="JAM Digi Solutions" class="footer-logo-img">
+                </a>
                 <p>Transforming ideas into powerful business campaigns. Your trusted branding partner.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
