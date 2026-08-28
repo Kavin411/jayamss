@@ -374,7 +374,43 @@
             font-size: 0.95rem;
         }
 
+        /* --- Client Videos Section (NEW) --- */
+        .client-videos {
+            background-color: var(--white);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px dashed var(--accent-color);
+        }
+
+        .video-placeholder {
+            height: 200px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
         /* --- Pricing Section --- */
+        .pricing {
+            background-color: var(--light-bg);
+        }
+
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -508,7 +544,7 @@
 
         /* --- About Section --- */
         .about {
-            background-color: var(--light-bg);
+            background-color: var(--white);
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
@@ -570,15 +606,15 @@
             font-size: 0.8rem;
         }
 
-        /* --- Contact / Form Section (NEW) --- */
+        /* --- Contact / Form Section --- */
         .contact-section {
-            background: var(--white);
+            background: var(--light-bg);
         }
 
         .contact-container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--light-bg);
+            background: var(--white);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -631,18 +667,6 @@
         .btn-submit:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(255, 51, 102, 0.3);
-        }
-
-        .form-message {
-            margin-top: 20px;
-            text-align: center;
-            font-weight: 600;
-            display: none;
-        }
-
-        .form-message.success {
-            color: #10b981;
-            display: block;
         }
 
         /* --- Footer --- */
@@ -757,6 +781,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#client-videos">Client Videos</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact" class="btn-contact">Get Started</a></li>
@@ -822,6 +847,7 @@
                 <div class="client-logo-card"><img src="thoppibiriyani.jpg" alt="Topi Vappa Biriyani"></div>
                 <div class="client-logo-card"><img src="RathnaStoresandPaints.png" alt="Rathna Stores"></div>
                 <div class="client-logo-card"><img src="NiyaazEnterprises.png" alt="Niyaaz Enterprises"></div>
+                <div class="client-logo-card"><img src="jamdigisolution.png" alt="Jamdigisolution"></div>
             </div>
         </div>
     </div>
@@ -858,6 +884,36 @@
                 </div>
                 <h3>Brand Identity</h3>
                 <p>Craft a memorable brand story with expert logo design, strategy, and visual guidelines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Videos Section (NEW) -->
+    <section class="client-videos" id="client-videos">
+        <h2 class="section-title">Client Videos</h2>
+        <p class="section-subtitle">Take a look at our recent video work created for our valued clients.</p>
+        
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-placeholder">
+                    <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <h3>Client Video Sample 1</h3>
+                <p>Coming Soon</p>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">
+                    <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <h3>Client Video Sample 2</h3>
+                <p>Coming Soon</p>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">
+                    <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <h3>Client Video Sample 3</h3>
+                <p>Coming Soon</p>
             </div>
         </div>
     </section>
@@ -929,27 +985,28 @@
         </div>
     </section>
 
+    <!-- Contact Form Section with Email Integration -->
     <section class="contact-section" id="contact">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Send us a message and we will get back to you shortly.</p>
         
         <div class="contact-container">
-            <form id="inquiryForm">
+            <form action="https://formspree.io/f/jamdigisolutions@gmail.com" method="POST" id="inquiryForm">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                    <input type="text" name="Name" id="name" class="form-control" placeholder="Enter your name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    <input type="email" name="Email" id="email" class="form-control" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                    <input type="tel" name="Phone" id="phone" class="form-control" placeholder="Enter your phone number" required>
                 </div>
                 <div class="form-group">
                     <label for="service">Service Required</label>
-                    <select id="service" class="form-control" required>
+                    <select name="Service" id="service" class="form-control" required>
                         <option value="" disabled selected>Select a Service</option>
                         <option value="Outdoor Advertising">Outdoor Advertising</option>
                         <option value="Digital Marketing">Digital Marketing</option>
@@ -959,10 +1016,9 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" class="form-control" placeholder="Write your requirements here..." required></textarea>
+                    <textarea name="Message" id="message" class="form-control" placeholder="Write your requirements here..." required></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Send Message</button>
-                <div id="formMessage" class="form-message">Thank you! Your message has been sent successfully.</div>
             </form>
         </div>
     </section>
@@ -984,6 +1040,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#client-videos">Client Videos</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#about">About Us</a></li>
                 </ul>
@@ -992,7 +1049,7 @@
                 <h3>Contact Us</h3>
                 <ul class="contact-info">
                     <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
-                    <li><i class="fa-solid fa-envelope"></i> info@jayamadsmedia.com</li>
+                    <li><i class="fa-solid fa-envelope"></i> jamdigisolutions@gmail.com</li>
                     <li><i class="fa-solid fa-location-dot"></i> 123 Media Tower, Chennai, TN</li>
                 </ul>
             </div>
@@ -1015,25 +1072,6 @@
                     video.play();
                 });
             }
-
-            // Form Submission Handling
-            const form = document.getElementById("inquiryForm");
-            const formMessage = document.getElementById("formMessage");
-
-            form.addEventListener("submit", function(e) {
-                e.preventDefault();
-                
-                // Show success message
-                formMessage.classList.add("success");
-                
-                // Clear form fields
-                form.reset();
-
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formMessage.classList.remove("success");
-                }, 5000);
-            });
         });
     </script>
 </body>
