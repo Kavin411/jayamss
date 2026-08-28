@@ -1004,7 +1004,7 @@
         </div>
     </section>
 
-    <!-- Direct Email Redirect Contact Form -->
+    <!-- Direct Gmail Redirect Form -->
     <section class="contact-section" id="contact">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Send us a message and we will get back to you shortly.</p>
@@ -1095,7 +1095,7 @@
                 });
             }
 
-            // Direct Email Redirect Script
+            // Direct Gmail Web Redirect Script
             const form = document.getElementById("inquiryForm");
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
@@ -1107,18 +1107,21 @@
                 const message = document.getElementById("message").value;
 
                 const recipient = "jamdigisolutions@gmail.com";
-                const subject = encodeURIComponent("New Inquiry from Jayam Ads Media Website");
+                const subject = encodeURIComponent("New Website Inquiry - Jayam Ads Media");
                 const body = encodeURIComponent(
-                    `New Website Inquiry Details:\n\n` +
-                    `Full Name: ${name}\n` +
+                    `Inquiry Details:\n\n` +
+                    `Name: ${name}\n` +
                     `Email: ${email}\n` +
                     `Phone: ${phone}\n` +
-                    `Service Required: ${service}\n` +
-                    `Message:\n${message}`
+                    `Service: ${service}\n` +
+                    `Message: ${message}`
                 );
 
-                // Redirect to Gmail / Default Email Client directly
-                window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+                // Direct Gmail Web Redirect Link
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+                
+                // Open Gmail in a new tab
+                window.open(gmailUrl, '_blank');
             });
         });
     </script>
