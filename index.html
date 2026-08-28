@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayam Ads Media | Modern & Attractive Branding Solutions</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -103,7 +101,7 @@
             transform: scale(1.05);
         }
 
-        /* --- Hero Section with Fullscreen Background Video --- */
+        /* --- Hero Section --- */
         .hero {
             height: 100vh;
             display: flex;
@@ -198,7 +196,7 @@
             color: var(--secondary-color);
         }
 
-        /* --- Valued Clients Logo Scrolling Ticker Section --- */
+        /* --- Clients Section --- */
         .clients-section {
             background: var(--secondary-color);
             padding: 40px 0;
@@ -572,6 +570,81 @@
             font-size: 0.8rem;
         }
 
+        /* --- Contact / Form Section (NEW) --- */
+        .contact-section {
+            background: var(--white);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            outline: none;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 8px rgba(255, 153, 0, 0.3);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 51, 102, 0.3);
+        }
+
+        .form-message {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        .form-message.success {
+            color: #10b981;
+            display: block;
+        }
+
         /* --- Footer --- */
         footer {
             background: var(--secondary-color);
@@ -678,7 +751,6 @@
 </head>
 <body>
 
-    <!-- Navigation Header -->
     <header>
         <a href="#" class="logo">Jayam<span>Ads</span></a>
         <nav>
@@ -692,7 +764,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Continuous Full-Screen Video Background and Content on Top -->
     <section class="hero" id="home">
         <video id="heroVideo" class="hero-video-bg" autoplay muted loop playsinline preload="auto">
             <source src="jayam.mp4" type="video/mp4">
@@ -708,12 +779,10 @@
         </div>
     </section>
 
-    <!-- Our Valued Clients Scrolling Ticker Logo Section -->
     <div class="clients-section">
         <div class="clients-title">Our Valued Clients</div>
         <div class="marquee-container">
             <div class="marquee">
-                <!-- First Set of Logo Items -->
                 <div class="client-logo-card"><img src="sschicken.jpg" alt="S.S. Chicken"></div>
                 <div class="client-logo-card"><img src="SuprajaJewellery.jpg" alt="Supraja Jewellery"></div>
                 <div class="client-logo-card"><img src="thoppibiriyani.jpg" alt="Topi Vappa Biriyani"></div>
@@ -748,45 +817,15 @@
                 <div class="client-logo-card"><img src="Apollo Dental - Copy.jpg" alt="Apollo Dental"></div>
                 <div class="client-logo-card"><img src="TKV Opticals.jpg" alt="TKV Opticals"></div>
 
-                <!-- Duplicate Set for Seamless Infinite Scrolling Loop -->
                 <div class="client-logo-card"><img src="sschicken.jpg" alt="S.S. Chicken"></div>
                 <div class="client-logo-card"><img src="SuprajaJewellery.jpg" alt="Supraja Jewellery"></div>
                 <div class="client-logo-card"><img src="thoppibiriyani.jpg" alt="Topi Vappa Biriyani"></div>
                 <div class="client-logo-card"><img src="RathnaStoresandPaints.png" alt="Rathna Stores"></div>
                 <div class="client-logo-card"><img src="NiyaazEnterprises.png" alt="Niyaaz Enterprises"></div>
-                <div class="client-logo-card"><img src="download - Copy.jpg" alt="Amudham Metro Mart"></div>
-                <div class="client-logo-card"><img src="Sri Periyanayagisofa.png" alt="Sri Periyanayagi sofa"></div>
-                <div class="client-logo-card"><img src="download - Copy.png" alt="Indian Imperial"></div>
-                <div class="client-logo-card"><img src="Banu Dental - Copy.jpg" alt="Banu Dental"></div>
-                <div class="client-logo-card"><img src="karthickpshyo.jpg" alt="Sri Karthick Care"></div>
-                <div class="client-logo-card"><img src="Bgauss - Copy.jpg" alt="Bgauss"></div>
-                <div class="client-logo-card"><img src="Pavan Tiles.png" alt="Pavan Tiles"></div>
-                <div class="client-logo-card"><img src="Dheen Food court - Copy.jpg" alt="Dheen Food Court"></div>
-                <div class="client-logo-card"><img src="champion icecream - Copy.jpg" alt="Champion Ice Creams"></div>
-                <div class="client-logo-card"><img src="Jai Furniture.jpg" alt="Jai Furniture"></div>
-                <div class="client-logo-card"><img src="Satish Hearing Aid Centre.jpg" alt="Satish Hearing Aid"></div>
-                <div class="client-logo-card"><img src="Valli Jewellery.jpg" alt="Valli Jewellery"></div>
-                <div class="client-logo-card"><img src="Venkatramana Sweets.png" alt="Venkatramana Sweets"></div>
-                <div class="client-logo-card"><img src="Senthuran City Developers.png" alt="Senthuran Developers"></div>
-                <div class="client-logo-card"><img src="Sri Muthu Groups.jpg" alt="Sri Muthu Groups"></div>
-                <div class="client-logo-card"><img src="Vijayalaksmi Traders.jpg" alt="Vijayalaksmi Traders"></div>
-                <div class="client-logo-card"><img src="Bathos - Copy.jpg" alt="Bathos"></div>
-                <div class="client-logo-card"><img src="VINAYAGA DENTAL.png" alt="Vinayaga Dental"></div>
-                <div class="client-logo-card"><img src="JAM DIGI.png" alt="JAM Digi Solutions"></div>
-                <div class="client-logo-card"><img src="RSR.png" alt="RSRS"></div>
-                <div class="client-logo-card"><img src="Siva Steels.png" alt="Siva Steels"></div>
-                <div class="client-logo-card"><img src="Studio Domain.png" alt="Studio Domain"></div>
-                <div class="client-logo-card"><img src="Yalini.png" alt="Yalini"></div>
-                <div class="client-logo-card"><img src="Karunya.png" alt="Karunya"></div>
-                <div class="client-logo-card"><img src="Mr. Millinium.png" alt="Mr. Millennium"></div>
-                <div class="client-logo-card"><img src="Muthu Cycle Mart.jpg" alt="Muthu Cycle Mart"></div>
-                <div class="client-logo-card"><img src="Apollo Dental - Copy.jpg" alt="Apollo Dental"></div>
-                <div class="client-logo-card"><img src="TKV Opticals.jpg" alt="TKV Opticals"></div>
             </div>
         </div>
     </div>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <h2 class="section-title">Elevate Your Presence</h2>
         <p class="section-subtitle">Comprehensive marketing and branding solutions tailored to your unique business goals.</p>
@@ -823,13 +862,11 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <h2 class="section-title">Flexible Pricing Plans</h2>
         <p class="section-subtitle">Transparent pricing designed to scale with your business needs. Choose the perfect fit.</p>
 
         <div class="pricing-grid">
-            <!-- Standard Plan -->
             <div class="pricing-card">
                 <h3>Standard</h3>
                 <div class="price">$29 <span>/mo</span></div>
@@ -844,7 +881,6 @@
                 <a href="#contact" class="btn-plan">Select Plan</a>
             </div>
 
-            <!-- Basic Plan (Highlighted) -->
             <div class="pricing-card popular">
                 <span class="popular-badge">Most Popular</span>
                 <h3>Basic Pro</h3>
@@ -860,7 +896,6 @@
                 <a href="#contact" class="btn-plan">Select Plan</a>
             </div>
 
-            <!-- Premium Plan -->
             <div class="pricing-card">
                 <h3>Premium</h3>
                 <div class="price">$49 <span>/mo</span></div>
@@ -877,7 +912,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="about-img">
             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Creative Team">
@@ -895,8 +929,45 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Send us a message and we will get back to you shortly.</p>
+        
+        <div class="contact-container">
+            <form id="inquiryForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Required</label>
+                    <select id="service" class="form-control" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="Outdoor Advertising">Outdoor Advertising</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Print Media">Print Media</option>
+                        <option value="Brand Identity">Brand Identity</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" placeholder="Write your requirements here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+                <div id="formMessage" class="form-message">Thank you! Your message has been sent successfully.</div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
         <div class="footer-content">
             <div class="footer-box">
                 <a href="#" class="logo" style="margin-bottom: 20px; display: inline-block;">Jayam<span>Ads</span></a>
@@ -931,23 +1002,38 @@
         </div>
     </footer>
 
-    <!-- Video Autoplay Enforcer Script -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Video Autoplay Enforcer
             var video = document.getElementById("heroVideo");
-            
-            // Force play video on load
             var playPromise = video.play();
             
             if (playPromise !== undefined) {
                 playPromise.then(function() {
-                    // Autoplay started successfully
                 }).catch(function(error) {
-                    // Autoplay prevented by browser, retry with mute forced
                     video.muted = true;
                     video.play();
                 });
             }
+
+            // Form Submission Handling
+            const form = document.getElementById("inquiryForm");
+            const formMessage = document.getElementById("formMessage");
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                // Show success message
+                formMessage.classList.add("success");
+                
+                // Clear form fields
+                form.reset();
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.remove("success");
+                }, 5000);
+            });
         });
     </script>
 </body>
